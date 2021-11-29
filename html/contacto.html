@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>mi web - contacto</title>
+    </head>
+    <body>
+        <!--encabezado-->
+        <h1>html curso udemy - CONTACTO</h1>
+        <!--menu-->
+        <ul> <!--lista ordenada-->
+            <li><a href="index.html" title="inicio">inicio</a></li> <!--items de la lista-->
+            <li><a href="contenidos.html" title="contenidos">contenido</a></li>
+            <li><a href="contacto.html" title="contacto">contacto</a></li>
+        </ul>
+
+        <hr /> <!--separador de renglon con linea-->
+
+        <h2>contacto</h2>
+        <form>
+            <p>
+                <label for="nombre">nombre</label>
+                <input type="text" name="nombre" />
+            </p>
+            <p>
+                <label for="biografia">biografia</label>
+                <textarea name="biografia"></textarea>
+            </p>
+            <p>
+                <label for="sexo">sexo</label>
+                <select name="sexo">
+                    <option value="hombre">masculino</option>
+                    <option value="mujer">femenino</option>
+                </select>
+            </p>
+            <br/>
+            <input type="submit" value="enviar datos" />
+        </form>        
+
+    </body>
+</html>
