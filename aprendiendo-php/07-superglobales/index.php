@@ -1,11 +1,11 @@
 <?php
 
 //direccion ip
-echo $_SERVER['SERVER_ADDR'];
+echo '<H1>'.$_SERVER['SERVER_ADDR'].'</H1>';
 
 //nombre
-echo $_SERVER['SERVER_NAME'];
+echo '<H1>'.$_SERVER['SERVER_NAME'].'<H1>';
 
-echo $_SERVER['SERVER_SOFTWARE'];
+echo '<H1>'.$_SERVER['SERVER_SOFTWARE'].'<H1>';
 
 ?>
