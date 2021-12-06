@@ -15,6 +15,10 @@
                 <label for="apellido">apellido</label>
                 <input type="text" name="apellido" />
             </p>
+            <p>
+                <label for="edad">edad</label>
+                <input type="number" name="edad" />
+            </p>
             
             <input type="submit" value="enviar" />
         </form>
