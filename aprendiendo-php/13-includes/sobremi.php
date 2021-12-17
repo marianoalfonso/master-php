@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="es">
     <head>
-        <meta charset+"utf-8" />
+        <meta charset="utf-8" />
         <title>includes en PHP 8</title>
     </head>
     <body>

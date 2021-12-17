@@ -7,7 +7,7 @@
     <body>
         <!--cabecera-->
         <?php
-            include 'includes/menu.php';
+            require 'includes/menu.php';
         ?>
         <!--contenido-->
         <?php
@@ -18,4 +18,4 @@
             include 'includes/footer.php';
         ?>
     </body>
-</html>
+</html> 
