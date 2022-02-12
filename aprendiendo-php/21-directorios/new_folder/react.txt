@@ -1,0 +1,15 @@
+.instalar node.js --> nodejs.org
+.cmd --> npm install -g npm@latest
+.npm --version
+.borrar la cache de npm para descargar la ultima version de react --> npm cache clean --force
+instalar react
+.npm install -g create-react-app (instala la ultilidad para crear el scaffolding de un nuevo proyecto)
+.crear un nuevo proyecto --> create-react-app [nombre del proyecto]
+.entrar al directorio del proyecto --> npm start
+
+
+index.js (carga e importa lo necesario de react)
+index.css (hoja de estilo)
+app.test.js (para hacer testeos)
+app.js (es un componente)
+app.css [hoja de estilos para el componente app.js]

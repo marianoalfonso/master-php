@@ -1,0 +1,5 @@
+Envíe un correo a reclamos@somosrex.com con los siguientes datos...
+*Nombre y apellido como figura en la factura
+*N° de factura
+*Localidad
+*Inconveniente que tuvo con el producto
