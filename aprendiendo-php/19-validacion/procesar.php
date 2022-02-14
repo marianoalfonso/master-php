@@ -16,8 +16,14 @@ if(empty($_POST['nombre']) || empty($_POST['apellido']) || empty($_POST['edad'])
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if(is_string($nombre) && )
-
+    if(!is_string($nombre) || !preg_match("/[a-zA-Z ]+/", $nombre)) {
+        $error = "nombre";
+        header("Location:index.php?error=$error");
+    }
+    if(empty($password) || strlen($password)<5) {
+        $error = "password";
+        header("Location:index.php?error=$error");
+    }
 }
 
 ?>
@@ -38,4 +44,4 @@ if(empty($_POST['nombre']) || empty($_POST['apellido']) || empty($_POST['edad'])
     <?php endif; ?>
 
 </body>
-</html>
+</html

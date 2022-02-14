@@ -8,8 +8,15 @@
     <?php
         if(isset($_GET['error'])) {
             $error = $_GET['error'];
+            echo 'contenido de la variable error: '.$error;
             if($error == 'faltan valores') {
                 echo '<strong style="color:red">introduce todos los datos</strong>';
+            }
+            if($error == 'nombre') {
+                echo '<strong style="color:red>corrige el nombre</strong>';
+            }
+            if($error == 'password') {
+                echo '<strong style="color:red>password corta</strong>';
             }
         }
     ?>
