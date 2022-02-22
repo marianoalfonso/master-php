@@ -1,0 +1,221 @@
+/*importamos fuentes*/
+@font-face {
+    font-family: "fajala";
+    src: url(../fonts/fuente.ttf) format("truetype");   /*establecemos la fuente*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*estilos generales*/
+/*establecemos fuentes en toda la pagina y limpiamos los margenes y los paddings*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Sans-Serif, Helvetica, Arial;
+    text-decoration: none; /*para que no ponga el subrayado en los enlaces, etc*/
+}
+
+/*limpia los flotados, cuando flotamos elementos a un lado y al otro, ciertos elementos se suben hacia arriba porque los flotados no estan limpios*/
+.clearfix {     /*clase*/
+    clear: both;
+    float: none;
+}
+
+body {
+    background: url(../images/cubes.png) #F4F4F4; /*#F4F4F4 color de fondo por si se ve algo*/
+}
+
+#cabecera {
+    width: 85%;  /*ancho fijo (no es responsivo)*/
+    height: auto;
+    background: transparent;
+    margin: 0px auto; /*centramos el div en la pagina web*/
+    /* border: 1px solid black; */
+}
+
+/*logotipo*/
+#logo {
+    float: left;
+    width: 540px;
+    height: 70px; 
+}
+
+#logo a {  /*texto del logo (es un enlace)*/
+    font-family: "fajala", Helvetica; /*usamos fajala que es la que importamos, si no usa Helvetica*/
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #2979CD;
+    text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px black; /*sombra en x, sombra en y, difuminacion, color de la sombra*/
+    transition: all 500ms;
+    line-height: 79px;
+    margin-left: 15px;
+}
+
+#logo a:hover { /*cuando pasemos por encima con el cursor*/
+    cursor: pointer;
+    text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px black; /*sombra en x, sombra en y, difuminacion, color de la sombra*/
+}
+
+/*menu*/
+#menu {
+    clear: both; /*limpia el flotado que tiene a ambos lados*/
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%); /*gradiente para los botones*/
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px #ccc;   /*sombra derecha, sombra abajo, difuminado, color*/
+    overflow: hidden; /*todo lo que se salga de la caja de menu se oculta*/
+}
+
+#menu ul { /*elemento  del objeto MENU*/
+    list-style: none;
+}
+
+#menu ul li {
+    float: left;
+    line-height: 42px; /*altura de la linea separadora*//*centra los elementos en vertical dentro del menu*/
+    border-right: 1px solid #d6d6d6;
+}
+
+
+#menu ul li a { /*a los enlaces*/
+    display: block;
+    padding-left: 10px; /*espacio izquierdo entre la pared y el texto de cada elemento del menu*/
+    padding-right: 10px; /*idem derecho*/
+    font-size: 15px;
+    color: #838282;
+}
+
+#menu ul li a:hover {
+    background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
+    font-weight: bold;
+}
+
+
+/*contenido*/
+#contenedor {
+    width: 85%;  /*ancho fijo (no es responsivo)*/
+    height: auto;
+    margin: 0px auto; /*centramos el div en la pagina web*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#sidebar {
+    float: right;   /*pone el sidebar flotante a la derecha*/
+    width: 26%;
+    min-height: auto;
+}
+
+.bloque {   /*clase bloque*/
+    display: block;
+    border-radius: 15px;
+    width: 90%;
+    margin: 0px auto;
+    margin-bottom: 45px;
+    background: white;
+    padding: 15px;  /*espacio de los cuatro bordes*/
+    box-shadow: 2px 2px 5px black;
+}
+
+.bloque h3 {
+    margin-bottom: 15px;
+}
+
+label,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+     display: block;
+     width: 95%; /*95% del tamaño de la caja*/
+     margin-top: 2px;
+     margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 3px;   /*altura de los inputs*/
+    margin-bottom: 10px;
+}
+
+
+input[type="button"],
+input[type="submit"] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+    border-radius: 5px;
+    color: white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    padding: 7px;
+}
+
+/*principal*/
+#principal {
+    float: left;
+    width: 68%;
+    min-height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #ccc;
+    margin-left: 20px;
+    padding: 20px;  /*separa el texto del borde*/
+    overflow: hidden;   /*si algo se sale del DIV se oculta*/
+}
+
+#principal a {
+    color: #333;
+}
+
+#principal h1 {
+    font-size: 32px;
+    color: #444;
+    letter-spacing: 1px;    /*separacion entre letras*/
+    text-shadow: 1px 1px 2px #ccc;
+    font-family: "fajala";
+}
+
+#principal h2 {
+    font-size: 20px;
+    color: #2979CD;
+    letter-spacing: 1px;    /*separacion entre letras*/
+    font-family: "fajala";
+    margin-top: 25px;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+#principal p {
+    margin-top: 8px;   /*separa el parrafo del titulo*/
+}
+
+#ver-todas a {
+    display: block;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    width: 160px;
+    margin: 0px auto; /*centra el elemento en la pagina*/
+    margin-top: 20px; /*separa el boton del articulo*/
+}
+
+/*pie de pagina*/
+#pie {
+    clear: both;
+    width: 85%;
+    margin: 0px auto;   /*centrar el elemento*/
+    background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
+    border: 1px solid #747171;
+    border-bottom: none;
+    border-radius: 8px 8px 0px 0px;
+    color: #666;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+}
