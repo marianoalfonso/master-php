@@ -5,7 +5,7 @@
     $tipo = $archivo['type'];
 
     
-    if($tipo == 'image/jpg' || $tipo == 'image/jpeg' || $tipo == 'image/png'|| $tipo == 'image/CR2' || $tipo == 'image/gif') {
+    if($tipo == 'image/jpg' || $tipo == 'image/jpeg' || $tipo == 'image/png'|| $tipo == 'image/CR2' || $tipo == 'image/gif' || $tipo == 'image/mp4') {
         // echo 'nombre:'.$nombre.'<br>';
         // echo 'tipo:'.$tipo.'<br>';
         if(!is_dir('imagenes')) {

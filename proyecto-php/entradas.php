@@ -1,19 +1,18 @@
 <?php require_once "includes/cabecera.php"; ?>
-
 <?php require_once "includes/lateral.php"; ?>
 
 <!-- main content -->
 <div id="principal">
 <!-- siempre conviene que haya un H1 en la pagina por los buscadores -->
-    <h1>ultimas entradas</h1>
+    <h1>todas las entradas</h1>
 
-    <?php $entradas = obtenerEntradas($conexion);
+    <?php $entradas = obtenerAllEntradas($conexion);
         if(!empty($entradas)): 
             while($entrada=mysqli_fetch_assoc($entradas)):
         ?>
                 <article class="entrada">  <!--iguales a un DIV pero semanticamente mejores para los navegadores-->
                 <!--You should use a class when you expect there to be multiple similar elements that you would like to retain similar styling-->
-                    <a href="entrada.php?id=<?=$entrada['id']?>"> <!-- linkeamos con la pagina entrada.php -->
+                    <a href="entrada.php?id=<?=$entrada['id']?>">
                         <h2><?=$entrada['titulo'];?> </h2>
                         <span class="fecha"><?=$entrada['categoria'].' | '.$entrada['fecha'];?></span>
 
@@ -25,9 +24,6 @@
         <?php endwhile; 
         endif; ?>
 
-    <div id="ver-todas"> 
-        <a href="entradas.php">ver todas las entradas</a>
-    </div>
 
 </div>
 

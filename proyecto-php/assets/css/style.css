@@ -25,6 +25,26 @@ body {
     background: url(../images/cubes.png) #F4F4F4; /*#F4F4F4 color de fondo por si se ve algo*/
 }
 
+.alerta {
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: green;
+    box-shadow: 0px 1px 3px #ccc;
+}
+
+.alerta-error {
+    background: red;
+}
+
+.fecha {
+    color: #4e4e4e;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
 #cabecera {
     width: 85%;  /*ancho fijo (no es responsivo)*/
     height: auto;
@@ -140,18 +160,39 @@ input[type="password"] {
     margin-bottom: 10px;
 }
 
-
-input[type="button"],
-input[type="submit"] {
+input[type="button"],   /* a todos los tipos button */
+input[type="submit"],   /* a todos los tipos submit */
+.boton {                /* a toda la clase boton */
     margin-top: 5px;
     margin-bottom: 5px;
     display: block;
-    border-radius: 5px;
+    border-radius: 25px;
     color: white;
     background: #007ee5;
     border: 1px solid #156785;
     cursor: pointer;
     padding: 7px;
+}
+
+.boton {
+    text-align: center;
+    width: 150px;
+    color: white !important;
+}
+
+.boton-naranja {
+    background: #efc270;
+    border-color: #efc270;
+}
+
+.boton-rojo {
+    background: #c57272;
+    border-color: #c57272;
+}
+
+.boton-verde {
+    background: #64df64;
+    border-color: #64df64;
 }
 
 /*principal*/
