@@ -4,6 +4,7 @@ solamente puede usarse para ser heredada por otra clase -->
 
     abstract class Ordenador {
 
+        // una propiedad no puede ser abstracta
         public $encendido;
 
         //para definir un metodo como abstracto, no debe tener funcionalidad, solo debe estar definido
@@ -27,6 +28,7 @@ solamente puede usarse para ser heredada por otra clase -->
         }
 
         //volvemos a definir el metodo Encender, igual que se referencia en la clase parent
+        //pero esta vez le definimos funcionalidad
         public function Encender() {
             $this->endendido = true;
         }
