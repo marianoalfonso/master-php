@@ -1,0 +1,3 @@
+http://localhost/master-php/aprendiendo-php-mvc/?controller=NotaController&action=listar
+http://localhost/master-php/aprendiendo-php-mvc/?controller=UsuarioController&action=mostrarTodos
+http://localhost/master-php/aprendiendo-php-mvc/?controller=UsuarioController&action=crearUsuario

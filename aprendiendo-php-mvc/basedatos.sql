@@ -13,7 +13,7 @@ create table usuarios (
 ) ENGINE=InnoDb;
 
 create table notas (
-    id              int(255) aitp_increment not null,
+    id              int(255) auto_increment not null,
     usuario_id      int(255) not null,
     titulo          varchar(255) not null,
     descripcion     MEDIUMTEXT,

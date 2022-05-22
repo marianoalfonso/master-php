@@ -14,9 +14,9 @@
             $this->db = Database::conectar();
         }
   
-        public function conseguirTodos() {
-            var_dump($this->db);
-            return 'obteniendo todos los datos';
+        public function conseguirTodos($tabla) {
+            $query = $this->db->query("select * from $tabla");
+            return $query;
         }
         
     }

@@ -1,0 +1,11 @@
+composer (dependency manager for PHP)
+https://getcomposer.org/
+
+packagist
+https://packagist.org/
+
+desde el cmd y en la carpeta del proyecto instalamos las dependencias
+por ej:
+
+    composer require spipu/html2pdf
+

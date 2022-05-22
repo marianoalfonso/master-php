@@ -8,8 +8,9 @@ class UsuarioController {
         // no ponemos .. porque el require lo hace desde el index
         require_once 'models/usuarioModel.php';
         $usuario1 = new Usuario();
-        // ejecutamos el procedimiento que esta en el modelo y lo mostramos en una VISTA
-        $usuariosObtenidos = $usuario1->conseguirTodos();
+
+        $usuarios = $usuario1->conseguirTodos('usuarios');
+
         // requerimos la vista
         // no ponemos .. porque el require lo hace desde el index
         require_once 'views/usuario/mostrar_todosView.php';

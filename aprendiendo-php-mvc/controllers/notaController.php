@@ -11,6 +11,8 @@ class NotaController {
         $nota1->setNombre('hello $nota1');
         $nota1->setContenido('hello world PHP MVC');
 
+        $notas = $nota1->conseguirTodos('notas');
+
         // referenciamos la vista
         require_once 'views/nota/listarView.php';
     }
