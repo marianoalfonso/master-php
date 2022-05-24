@@ -1,0 +1,8 @@
+ORGANIZACION DE CARPETAS
+root
+    assets
+        img
+    databases
+
+NOTAS HTML
+<header>    <!--es igual a DIV pero mejor a nivel de metadatos-->
