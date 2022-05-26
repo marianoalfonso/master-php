@@ -6,3 +6,28 @@ root
 
 NOTAS HTML
 <header>    <!--es igual a DIV pero mejor a nivel de metadatos-->
+
+ESTRUCTURA MVC
+autoload.php 
+index.php (controlador frontal)
+    config
+        db.php  (conexion con la DB)
+        parameters.php  (parametros generales para el proyecto)
+    controllers
+    models
+    views
+        (se crea una carpeta por cada controller)
+
+
+testo de controllers
+    http://localhost/master-php/proyecto-php-poo/?controller=usuariosController&action=index
+    http://localhost/master-php/proyecto-php-poo/?controller=categoriasController&action=index
+    http://localhost/master-php/proyecto-php-poo/?controller=productosController&action=index
+    http://localhost/master-php/proyecto-php-poo/?controller=pedidosController&action=index
+
+
+INFORMACION RUTAS URL
+para el manejo de rutas en la url debemos tener activado en la configuracion de apache:
+    ->apache->apache_modules->rewrite_module
+
+    crear en el root un archivo .htaccess

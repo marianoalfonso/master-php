@@ -4,6 +4,7 @@
 * {
     padding: 0px;    /* margen interior de un elemento */
     margin: 0px;     /* margen exterior de un elemento */
+    font-family: sans-serif, Helvetica, Arial;  /* fuente para todo el sitio */
 }
 
 body {
@@ -54,13 +55,229 @@ a:hover {
 /* elemento a dentro de logo */
 #logo a {
     float: left;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 4px;
     font-family: "Open Sans", Helvetica, Arial;
     text-transform: uppercase;
+    color: #01B1EA;
+    font-weight: bold;
+    text-decoration: none; /* no subraya el link */
+    margin-top: 18px;
+    margin-left: 25px;
+    text-shadow: 0px 2px 1px #222222;
+    transition: all 300ms; /* tiempo de transicion para cuando haga a:hover */
 }
 
+#logo a:hover {
+    text-shadow: 0px 2px 1px #222222, 0px 0px 4px #01B1EA;
+}
+
+/*MENU*/
+#menu {
+    clear: both;    /* limpia los flotados */
+    background: #222;
+    color: white;
+    height: 30px;
+    border-bottom: 5px solid #01B1EA;
+}
+
+#menu ul {
+    list-style: none; /* quita los puntitos de los items */
+    text-decoration: none;
+    margin: 0px auto;
+    margin-left: 25px;
+}
+
+#menu ul li {   /* estilo a cada uno de los elementos */
+    line-height: 30px; /* para que se situe en el centro de la barra */
+    float: left;
+    border-right: 1px solid #363636;
+
+}
+
+
+#menu a {
+    display: block; /* para que se comporten como un bloque */
+    color: white;
+    text-decoration: none; /* quita el subrayado de los links */
+    padding-left: 15px; /* lateral izquierdo dentro del bloque */
+    padding-right: 15px; /* lateral derecho dentro del bloque */
+    transition: all 700ms;
+}
+
+#menu a:first-child { /* pseudo clase para el primer elemento de la lista */
+    border-left: 1px solid #363636;  /* barra adelante del primer elemento de la lista */
+}
+
+#menu a:hover { 
+    background: #01B1EA;
+}
+
+/* CONTENT */
+#content {
+    margin: 0px auto;   /* para que lo centre */
+    overflow: hidden; /* oculta lo que sobresale del div */
+    background: white;
+}
+
+/* BARRA LATERAL */
+#lateral {
+    width: 15%;
+    min-height: 500px;  
+    float: left;
+    margin-top: 20px; /* para separar de arriba */
+    margin-left: 10px; /* para separar de los laterales */
+}
+
+#lateral h3 {
+    display: block;
+    color: #222;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #E1E1E1;
+    border-bottom: 2px solid #01B1EA;
+}
+
+/* FORMS */
+label,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #CCC inset;  /* sombreado dentro del campo */
+    background: white;
+    padding: 3px;
+    color: gray;
+    transition: all 700ms;  /* por si ponemos algun efecto */
+}
+
+/* para cuando los campos esten en foco */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border: 1px solid #01B1EA;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+button, .button {
+    display: block;
+    border-radius: 4px;
+    width: auto;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px ;
+    color: white;
+    background: #2979CD;
+    border: 1px solid #11608E;
+    cursor: pointer;
+}
+
+.button {
+    background: green;
+    color: white !important;
+    text-decoration: none;
+}
+/* lo ponemos abajo del anterior para que tome los cambios
+por una cuestion de orden de aplicacion de estilos, ultimo es lo que queda */
+label,
+input[type="button"],
+input[type="submit"],
+button, .button {
+    display: block;
+    margin-top: 10px;
+}
+
+#lateral .block_aside { /* id + clase */
+    display: block;
+    width: 90%; /* 90% de la barra lateral */
+    margin: 5px auto; /* auto para que lo centre */
+    padding: 10px;
+}
+
+#lateral ul {
+    margin-top: 22px;
+    margin-bottom: 20px;
+}
+
+#lateral ul li {
+    list-style: square;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* SECCION CENTRAL */
+#central {
+    min-height: 500px;  /* altura minima de la caja central de productos */
+    width: 75%;
+    float: right;
+    border-left: 1px solid #CCC;
+    box-shadow: -5px -1px 5px #DDD;
+    padding: 25px;
+}
+
+#central h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 15px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* PRODUCTOS */
 /* para las imagenes dentro de la clase producto */
+.product {
+    width: 30%;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
 .product img {  
     width: 100px;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.product p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* FOOTER */
+#footer {
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222222;
+    border-top: 5px solid #01B1EA;
 }
