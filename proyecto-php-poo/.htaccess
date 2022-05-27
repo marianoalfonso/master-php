@@ -1,14 +1,10 @@
-<IFModule mod.rewrite.c>
-    <!-- activar el rewrite engine -->
+<IfModule mod_rewrite.c>
     RewriteEngine on
     ErrorDocument 404 localhost/master-php/proyecto-php-poo/error/
 
-    <!-- no podremos cargar un directorio cualquiera en la URL -->
     RewriteCond %{SCRIPT_FILENAME} !-d  
-    <!-- no podremos cargar un archivo cualquiera en la URL -->
+    
     RewriteCond %{SCRIPT_FILENAME} !-f
 
-
-    <!-- regla de reescritura de la URL -->
     RewriteRule ^(.*)/(.*)  index.php?controller=$1&action=$2
-</IFModule>
+</IfModule>

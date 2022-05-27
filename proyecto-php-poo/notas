@@ -20,10 +20,20 @@ index.php (controlador frontal)
 
 
 testo de controllers
-    http://localhost/master-php/proyecto-php-poo/?controller=usuariosController&action=index
-    http://localhost/master-php/proyecto-php-poo/?controller=categoriasController&action=index
-    http://localhost/master-php/proyecto-php-poo/?controller=productosController&action=index
-    http://localhost/master-php/proyecto-php-poo/?controller=pedidosController&action=index
+    usuariosController
+        http://localhost/master-php/proyecto-php-poo/?controller=usuariosController&action=registro
+        http://localhost/master-php/proyecto-php-poo/usuariosController/registro
+        http://localhost/master-php/proyecto-php-poo/?controller=usuariosController&action=save
+        http://localhost/master-php/proyecto-php-poo/usuariosController/save
+    categoriasController
+        http://localhost/master-php/proyecto-php-poo/?controller=categoriasController&action=index
+        http://localhost/master-php/proyecto-php-poo/categoriasController/index
+    productosController
+        http://localhost/master-php/proyecto-php-poo/?controller=productosController&action=index
+        http://localhost/master-php/proyecto-php-poo/productosController/index
+    pedidosController
+        http://localhost/master-php/proyecto-php-poo/?controller=pedidosController&action=index
+        http://localhost/master-php/proyecto-php-poo/pedidosController/index
 
 
 INFORMACION RUTAS URL
@@ -31,3 +41,20 @@ para el manejo de rutas en la url debemos tener activado en la configuracion de 
     ->apache->apache_modules->rewrite_module
 
     crear en el root un archivo .htaccess
+
+archivo .htaccess
+<IfModule mod_rewrite.c>
+    #activar el rewrite engine
+    RewriteEngine on
+    ErrorDocument 404 localhost/master-php/proyecto-php-poo/error/
+
+    #no podremos cargar un directorio cualquiera en la URL
+    RewriteCond %{SCRIPT_FILENAME} !-d  
+    
+    #no podremos cargar un archivo cualquiera en la URL
+    RewriteCond %{SCRIPT_FILENAME} !-f
+
+    #regla de reescritura de la URL
+    RewriteRule ^(.*)/(.*)  index.php?controller=$1&action=$2
+</IfModule>
+

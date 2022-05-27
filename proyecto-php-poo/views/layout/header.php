@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tienda de ropa</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="<?=base_url?>assets/css/styles.css" />
 </head>
 <body>
     <!-- con el siguiente DIV agrupamos todo el contenido en un div para estilos generales -->
@@ -14,9 +14,10 @@
         <!--CABECERA-->
         <header id="header">    <!--es igual a DIV pero mejor a nivel de metadatos -->
             <div id="logo">
-                <img src="assets/img/camiseta.png" alt="camiseta logo" />
+                <img src="<?=base_url?>assets/img/logo.jpg" alt="logo" />
                 <a href="index.php">
-                    Tienda de Ropa
+                    <!-- Tienda de Ropa -->
+                    padron de beneficiarios Incluir Salud
                 </a>
             </div>
         </header>

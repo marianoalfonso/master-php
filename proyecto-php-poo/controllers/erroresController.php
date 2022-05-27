@@ -1,7 +1,9 @@
 <?php
 
     class erroresController {
-        public function index() {
-            echo "<h1>la pagina que buscas no existe (error 404)</h1>";
+
+        public function error404() {
+            echo "<h1>la CLASE, CONTROLADOR o METODO no existen (error 404)</h1>";
         }
+
     }
