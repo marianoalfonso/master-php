@@ -3,8 +3,12 @@
         // require_once 'controllers/usuarioController.php';
         // require_once 'controllers/notaController.php';
 
+    // iniciamos la sesion
+    session_start();
     // reemplazamos los includes anteriores por el autoLoad
     require_once 'autoload.php';
+    // incluimos la conexion a la base de datos para todo el proyecto
+    require_once 'config/db.php';
     // incluimos los parametros generales
     require_once 'config/parameters.php';
     // incluimos el header
@@ -52,4 +56,6 @@
 
     // incluimos el footer
     require_once 'views/layout/footer.php';
+
+    
 ?>

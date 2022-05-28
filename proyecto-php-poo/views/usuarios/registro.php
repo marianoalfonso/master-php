@@ -1,6 +1,13 @@
 <h1>registro de usuarios</h1>
 
-<form action="index.php?controller=usuariosController&action=save" method="POST">
+<!-- mostramos la sesion creada al momento de grabar el registro -->
+<?php if(isset($_SESSION["register"]) && $_SESSION["register"] == "complete") : ?>
+    <strong>registro completado correctamente</strong>
+<?php else: ?>
+    <strong>falla al registrar el usuario</strong>
+<?php endif; ?>
+
+<form action="<?=base_url?>usuarios/save" method="POST">
     <label for="nombre">nombre</label>
     <input type="text" name="nombre" required />
     <label for="apellidos">apellido</label>
