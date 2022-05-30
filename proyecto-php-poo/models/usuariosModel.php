@@ -49,12 +49,12 @@
         }
 
         function getPassword() {
-            return $this->password;
+            // encriptamos la contraseña con el metodo PASSWORD_BCRYPT en 4 pasos
+            return password_hash($this->db->real_escape_string($this->password), PASSWORD_BCRYPT, ['cost' => 4]);
         }
 
         function setPassword($password) {
-            // encriptamos la contraseña con el metodo PASSWORD_BCRYPT en 4 pasos
-            $this->password = password_hash($this->db->real_escape_string($this->password), PASSWORD_BCRYPT, ['cost' => 4]);
+            $this->password = $password;
         }
 
         function getImagen() {
@@ -77,19 +77,20 @@
         }
 
         // el parametro $password debe venir cifrado
-        public function login($email, $password) {
-            $result = false;
-            $email = $this->getEmail();
-            $password = $this->getPassword();
+        public function login() {   //en vez de recibir email y password por parametro, los obtenemos
+            $result = false;        //con los metodos getEmail y getPassword
+            $email = $this->email;
+            $password = $this->password;
 
             // comprobamos si existe el usuario
             $sql="select * from usuarios where email = '$email'";
             $login = $this->db->query($sql);
             // si el login devolvio resultados y si las filas son 1
-            if($login && $login->num_rows() == 1) {
+            if($login && $login->num_rows == 1) {
                 $usuario = $login->fetch_object();
                 // verificamos password
 
+                // password_verify — Comprueba que la contraseña coincida con un hash
                 $verify = password_verify($password, $usuario->password);
                 $result = false;
                 if($verify) {
