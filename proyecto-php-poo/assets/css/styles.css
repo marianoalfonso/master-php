@@ -26,6 +26,14 @@ a:hover {
     color: #555555;
 }
 
+.alert_green {
+    color: green;
+}
+
+.alert_red {
+    color: red;
+}
+
 /* CONTAINER */
 /* esto se aplica a todo, ya que todo el sitio esta contenido en un DIV con el id CONTAINER */
 #container {
@@ -281,3 +289,4 @@ button, .button {
     background: #222222;
     border-top: 5px solid #01B1EA;
 }
+

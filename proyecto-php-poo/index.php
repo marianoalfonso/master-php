@@ -11,6 +11,8 @@
     require_once 'config/db.php';
     // incluimos los parametros generales
     require_once 'config/parameters.php';
+    // incluimos los helpers
+    require_once 'helpers/utils.php';
     // incluimos el header
     require_once 'views/layout/header.php';
     // incluimos el sidebar

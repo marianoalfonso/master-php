@@ -76,5 +76,30 @@
             return $result;
         }
 
+        // el parametro $password debe venir cifrado
+        public function login($email, $password) {
+            $result = false;
+            $email = $this->getEmail();
+            $password = $this->getPassword();
+
+            // comprobamos si existe el usuario
+            $sql="select * from usuarios where email = '$email'";
+            $login = $this->db->query($sql);
+            // si el login devolvio resultados y si las filas son 1
+            if($login && $login->num_rows() == 1) {
+                $usuario = $login->fetch_object();
+                // verificamos password
+
+                $verify = password_verify($password, $usuario->password);
+                $result = false;
+                if($verify) {
+                    // si esta correcto devolvemos el objeto del usuario
+                    $result = $usuario;
+                }
+                return $result;
+            }
+
+
+        }
 
     }
