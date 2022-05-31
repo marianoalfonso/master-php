@@ -58,7 +58,7 @@
 
                 if($identity && is_object($identity)) {
                     $_SESSION["identity"] = $identity;
-                    if($identity->role == "admin") {
+                    if($identity->rol == "admin") {
                         $_SESSION["admin"] = true;
                     }
                 } else {
@@ -70,10 +70,10 @@
 
         public function logout() {
             if(isset($_SESSION["identity"])) {
-                Utils::deleteSession($_SESSION["identity"]);
+                unset($_SESSION["identity"]);
             }
             if(isset($_SESSION["admin"])) {
-                Utils::deleteSession($_SESSION["admin"]);
+                unset($_SESSION["admin"]);
             }
             header("Location: ".base_url);
         }

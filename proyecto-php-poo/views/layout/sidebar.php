@@ -17,20 +17,26 @@
                     <?php endif; ?>
 
                     <ul>
-                        <li>
-                            <a href="#">mis pedidos</a>
-                        </li>
-                        <li>
-                            <a href="#">gestionar pedidos</a>
-                        </li>
-                        <li>
-                            <a href="#">gestionar categorias</a>
-                        </li>
-                        <li>
-                            <?php if(isset($_SESSION["identity"])): ?>
+                        <!-- solamente mostramos los dos siguientes items si el usuario es admin -->
+                        <?php if(isset($_SESSION["admin"])): ?>
+                            <li>
+                                <a href="#">gestionar categorias</a>
+                            </li>
+                            <li>
+                                <a href="#">gestionar productos</a>
+                            </li>
+                            <li>
+                                <a href="#">gestionar pedidos</a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(isset($_SESSION["identity"])): ?>
+                            <li>
+                                <a href="#">mis pedidos</a>
+                            </li>
+                            <li>
                                 <a href="<?=base_url?>usuarios/logout">cerrar sesion</a>
-                            <?php endif; ?>
-                        </li>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </aside>

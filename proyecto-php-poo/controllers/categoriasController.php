@@ -2,7 +2,7 @@
 
     class categoriasController {
         public function index() {
-            echo 'controlador: categorias<br>accion: index';
+            require_once 'views/categorias/index.php';
         }
     }
 

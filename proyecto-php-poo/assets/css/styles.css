@@ -226,7 +226,7 @@ button, .button {
 }
 
 #lateral ul li {
-    list-style: square;
+    list-style: none; /* quita los puntitos de los items */
     margin-left: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
