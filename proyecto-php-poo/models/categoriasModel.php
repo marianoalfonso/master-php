@@ -15,7 +15,7 @@
         }
 
         public function setId($id) {
-            $this->id + $id;
+            $this->id = $id;
         }
 
         public function getNombre() {
@@ -23,9 +23,15 @@
         }
 
         public function setNombre($nombre) {
-            $this->nombre + $nombre;
+            $this->nombre = $nombre;
         }
 
+        public function getAll() {
+            $sql = "select id,nombre from categorias";
+            $categorias = $this->db->query($sql);
+            return $categorias;
         }
+
+    }
 
 ?>
