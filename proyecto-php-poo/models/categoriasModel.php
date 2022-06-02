@@ -23,13 +23,23 @@
         }
 
         public function setNombre($nombre) {
-            $this->nombre = $nombre;
+            $this->nombre = $this->db->real_escape_string($nombre);
         }
 
         public function getAll() {
-            $sql = "select id,nombre from categorias";
+            $sql = "select id,nombre from categorias order by id desc;";
             $categorias = $this->db->query($sql);
             return $categorias;
+        }
+
+        public function save() {
+            $sql = "insert into categorias values (null, '{$this->getNombre()}');";
+            $save = $this->db->query($sql);
+            $result = false;
+            if($result) {
+                $result = true;
+            }
+            return $result;
         }
 
     }

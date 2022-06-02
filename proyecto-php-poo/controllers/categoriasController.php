@@ -4,6 +4,8 @@
 
     class categoriasController {
         public function index() {
+            // si no es admin redirige
+            Utils::isAdmin();
             // creamos el objeto
             $categoria = new categoria();
             // ejecutamos el metodo del objeto
@@ -13,9 +15,22 @@
 
         }
 
+        public function crear() {
+            // si no es admin redirige
+            Utils::isAdmin();
+            require_once "views/categorias/crearCategoriaView.php";
+        }
     
-    
-
+        public function save() {
+            // si no es admin redirige
+            Utils::isAdmin();
+            if(isset($_POST)) {
+                $categoria = new Categoria();
+                $categoria->setNombre($_POST["nombre"]);
+                $categoria->save();
+            }
+            header("Location:".base_url."categorias/index");
+        }
 
     }
 
