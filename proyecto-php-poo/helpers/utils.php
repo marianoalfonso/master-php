@@ -20,6 +20,12 @@
             }
         }
 
+        public static function showCategorias() {
+            require_once 'models\categoriasModel.php';
+            $categoria = new Categoria();
+            $categorias = $categoria->getAll();
+            return $categorias;
+        }
     }
 
 ?>

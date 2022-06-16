@@ -163,11 +163,18 @@ td {
 }
 
 /* FORMS */
+
+.form_container {
+    width: 50%;
+}
+
 label,
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+input[type="number"],
+select,
+textarea {
     display: block;
     width: 95%;
     margin-top: 2px;
@@ -177,7 +184,9 @@ select {
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+input[type="number"],
+select,
+textarea {
     border: 1px solid #C9C9C9;
     box-shadow: 0px 0px 2px #CCC inset;  /* sombreado dentro del campo */
     background: white;
@@ -221,6 +230,16 @@ button, .button {
     margin-bottom: 8px;
 }
 
+para los botones de editar y eliminar de la gestion de elementos
+.button-gestion {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button-red {
+    background: red;
+    border: 1px solid orange;
+}
 /* lo ponemos abajo del anterior para que tome los cambios
 por una cuestion de orden de aplicacion de estilos, ultimo es lo que queda */
 label,

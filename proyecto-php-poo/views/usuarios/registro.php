@@ -9,15 +9,17 @@
 <!-- eliminamos la sesion -->
 <?php Utils::deleteSession('register'); ?>
 
-<form action="<?=base_url?>usuarios/save" method="POST">
-    <label for="nombre">nombre</label>
-    <input type="text" name="nombre" />
-    <label for="apellidos">apellido</label>
-    <input type="text" name="apellidos" />
-    <label for="email">email</label>
-    <input type="email" name="email" />
-    <label for="password">password</label>
-    <input type="password" name="password" />
+<div class="form_container">
+    <form action="<?=base_url?>usuarios/save" method="POST">
+        <label for="nombre">nombre</label>
+        <input type="text" name="nombre" />
+        <label for="apellidos">apellido</label>
+        <input type="text" name="apellidos" />
+        <label for="email">email</label>
+        <input type="email" name="email" />
+        <label for="password">password</label>
+        <input type="password" name="password" />
 
-    <input type="submit" value="registrarse" />
-</form> 
+        <input type="submit" value="registrarse" />
+    </form> 
+</div>
